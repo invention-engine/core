@@ -1,0 +1,10 @@
+{
+  "name": "invention-core",
+  "version": "0.0.1",
+  "description": "Free TypeScript/JavaScript game engine - Core Modules",
+  "main": "dist/index.js",
+  "repository": "git@github.com:invention-engine/invention-core.git",
+  "author": "Otoniel Reyes <otoniel@otonielreyes.com>",
+  "license": "GPL-3.0-or-later",
+  "private": false
+}
