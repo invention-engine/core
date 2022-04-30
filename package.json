@@ -2,9 +2,23 @@
   "name": "invention-core",
   "version": "0.0.1",
   "description": "Free TypeScript/JavaScript game engine - Core Modules",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
+  "module": "lib/index.esm.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
   "repository": "git@github.com:invention-engine/invention-core.git",
   "author": "Otoniel Reyes <otoniel@otonielreyes.com>",
   "license": "GPL-3.0-or-later",
-  "private": false
+  "private": false,
+  "devDependencies": {
+    "rollup": "^2.71.1",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "typescript": "^4.6.4"
+  },
+  "files": [
+    "lib",
+    "LICENSE",
+    "package.json"
+  ]
 }
