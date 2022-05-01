@@ -10,7 +10,7 @@ export const random = (top?: number | string, includeTop: boolean = false) => {
     if (typeof(top) === 'number') {
       if (top > 0) {
         if (typeof(includeTop) === 'boolean') {
-          return includeTop ? Math.floor(Math.random() * (parseInt(top) - 1)) : Math.floor(Math.random() * parseInt(top));
+          return includeTop ? Math.floor(Math.random() * (top - 1)) : Math.floor(Math.random() * top);
         } else {
           throw new Error('includeTop is not a boolean.');
         }
@@ -18,9 +18,9 @@ export const random = (top?: number | string, includeTop: boolean = false) => {
         throw new Error('Top must be greater that 0.')
       }
     } else if (typeof(top) === 'string') {
-      if (parseInt(top) > 0) {
+      if (+top > 0) {
         if (typeof(includeTop) === 'boolean') {
-          return includeTop ? Math.floor(Math.random() * (parseInt(top) - 1)) : Math.floor(Math.random() * parseInt(top));
+          return includeTop ? Math.floor(Math.random() * (+top - 1)) : Math.floor(Math.random() * +top);
         } else {
           throw new Error('includeTop is not a boolean.');
         }
