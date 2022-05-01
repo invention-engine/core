@@ -16,8 +16,8 @@ test('Math\'s random function returns a number between 0 and the given number (i
 });
 
 test('Math\'s random function throws error if top is less than 1', () => {
-  expect(() => random(-1)).toThrow();
-  expect(() => random('0')).toThrow();
+  expect(() => random(0)).toThrow();
+  expect(() => random('-10')).toThrow();
 });
 
 test('Math\'s random function throws error if top is not a number nor string', () => {
